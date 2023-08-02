@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries Flags</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background-color: azure;
+            flex-direction: column;
+        }
+        img{
+            width: 400px;
+        }
+
+        .container{
+            width: 400px;
+        }
+
+        p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        footer{
+            position: absolute;
+            bottom: 0;
+            width: 90%;
+            height: 2.5rem;  
+            margin-bottom: 3rem; 
+        }
+
+        a { 
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+  
+    <% if(locals.flags){ %>
+
+        <img src="<%= flags.png%>" >
+        <p><%= flags.alt %></p>
+
+    <% } %>
+      
+
+    </div>
+    <footer>
+        <p>source : <a href="https://restcountries.com/">restcountries</a></p>
+    </footer>
+  </body>
+  
+  </html>
+</html>
